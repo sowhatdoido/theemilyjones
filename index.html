@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>THE Emily Jones | Los Angeles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
 </head>
 <body>
     <div class="section">
@@ -20,11 +23,48 @@
             </div>
         </div>
     </div>
+    <div class="section hero">
+        <div class="section__content clearfix">
+            <div class="col col__right">
+                <img src="/assets/images/emily.png" alt="itz me">
+            </div>
+            <div class="col col__left">
+                <h2>
+                    keeping L.A. <br />
+                    <span class="text-rotator">
+                        <span>weird</span>
+                        <span>organized</span>
+                        <span class="active">nerdy</span>
+                        <span>fighting on</span>
+                        <span>cat friendly</span>
+                    </span>
+                    <br />
+                    since 2010
+                </h2>
+                <script>
+                    
+                </script>
+                <p>My name is Emily Jones, something curator and one direction savant.</p>
+                <p>I’m a Gryffindor living in a Slytherin city, looking to collaborate with other creatively organized minds.</p>
+            </div>
+        </div>
+    </div>
+    
     
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var rotateText = function(){
+            var $active = $('.active', '.text-rotator');
+            var $next = ($active.next().length)? $active.next(): $('span:first', '.text-rotator');
+            $active.removeClass('active');
+            $next.addClass('active');
+        };
+        setInterval(rotateText, 2500);
+    </script>
 </body>
 </html>
