@@ -355,7 +355,6 @@ h2 {
 }
 
 .lightbox {
-    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -365,6 +364,10 @@ h2 {
     background: #FFF;
     z-index: 99999;
     overflow-y: scroll;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50%);
+    transition: all ease 150ms;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -404,5 +407,7 @@ body.is-viewing_lightbox {
     overflow: hidden;
 }
 body.is-viewing_lightbox .lightbox {
-    display: block;
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateY(0%);
 }

@@ -16,9 +16,9 @@
                     <h1>Emily Jones</h1>
                 </a>
                 <nav class="nav">
-                    <a class="nav__item" href="">About</a>
-                    <a class="nav__item" href="">Work</a>
-                    <a class="nav__item" href="">Contact</a>
+                    <a class="nav__item" href="#about">About</a>
+                    <a class="nav__item" href="#work">Work</a>
+                    <a class="nav__item" href="#contact">Contact</a>
                     <a class="nav__item nav__item--red" href="">Resume</a>
                 </nav>
             </div>
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div class="section about">
+    <div id="about" class="section about">
         <div class="section__content">
             <span class="section__heading">about</span>
             <div class="about__columns">
@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-    <div class="section work">
+    <div id="work" class="section work">
         <div class="section__content">
             <span class="section__heading">Work</span>
             <h2>Why should you trust me? <br /> Well, these people did.</h2>
@@ -124,7 +124,7 @@
             </div>
         </div>
     </div>
-    <div class="section contact">
+    <div id="contact" class="section contact">
         <div class="section__content">
             <span class="section__heading">Contact</span>
             <h2>Let’s get in touch.</h2>
@@ -187,6 +187,12 @@
             $stickyHeader.removeClass('sticky-header--scroll-down');
         }
 
+    });
+
+    $('.nav a').click(function(){
+        var dest = $(this).attr('href');
+        var scrollTo = $(dest).position().top;
+        $('html, body').animate({ scrollTop: scrollTo }, 150);
     });
 
     var job = function(e, job){
