@@ -303,7 +303,8 @@ h2 {
 }
 
 .contact {
-    padding: 50px 0;
+    padding: 50px 0 100px;
+    border-bottom: 25px solid #262626;
 }
 .contact h2 {
     font-size: 40px;
