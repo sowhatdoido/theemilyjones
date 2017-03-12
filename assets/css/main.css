@@ -211,6 +211,10 @@ h2 {
     background: #d6008b;
     margin: 15px 0;
 }
+.about__currently {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+}
 .about__columns {}
 .about .col {
     display: inline-block;
@@ -241,6 +245,8 @@ h2 {
     display: inline-block;
     width: 31%;
     font-size: 12px;
+    vertical-align: top;
+    margin-bottom: 5px;
 }
 .about ul li span {
     color: gray;
@@ -261,7 +267,7 @@ h2 {
         box-sizing: border-box;
     }
     .about ul {
-        padding: 0 0 0 30px;
+        padding: 0 0 0 15px;
     }
 }
 
