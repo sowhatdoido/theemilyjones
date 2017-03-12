@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <div class="section">
+    <div class="header-placeholder"></div>
+    <div class="section sticky-header">
         <div class="section__content">
             <div class="header">
                 <a class="header__logo" href="">
@@ -160,14 +161,40 @@
     <script src="templates/compiled.js"></script>
     <script src="jobs.json"></script>
     <script>
-    
+    var $window = $(window), lastScroll = 0;
+    var $stickyHeader = $('.sticky-header');
+
+    $window.scroll(function(){
+        var scrollTop = $window.scrollTop();
+        var direction = lastScroll - scrollTop;
+        lastScroll = scrollTop;
+
+        if(scrollTop === 0) {
+            console.log("Reset Nav");
+            $stickyHeader.removeClass("sticky-header--launched").removeClass('sticky-header--scroll-up').removeClass('sticky-header--scroll-down');
+        }
+
+        if(direction < 0) { // Scroll down
+           if(!$stickyHeader.hasClass('sticky-header--launched'))
+                $stickyHeader.addClass('sticky-header--launched');
+
+            if(scrollTop > 150) {
+                $stickyHeader.addClass('sticky-header--scroll-down');
+                $stickyHeader.removeClass('sticky-header--scroll-up');
+            }
+        } else { // Scrolling up
+            $stickyHeader.addClass('sticky-header--scroll-up');
+            $stickyHeader.removeClass('sticky-header--scroll-down');
+        }
+
+    });
+
     var job = function(e, job){
         e.preventDefault();
 
         var template = Handlebars.templates['lightbox.hbs'],
         context = data[job]
         html    = template(context);
-        console.log(template, context, html);
 
         $('body').addClass('is-viewing_lightbox');
         $('.lightbox .section__content.job').html(html);

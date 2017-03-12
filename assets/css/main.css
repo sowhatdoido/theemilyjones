@@ -4,6 +4,10 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
 div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -46,6 +50,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     font-family: 'Raleway', sans-serif;
+    transition: all ease 150ms;
 }
 .header__logo {
     background: url('../images/logo.png') no-repeat;
@@ -53,6 +58,7 @@ a:hover {
     width: 161px;
     height: 90px;
     display: inline-block;
+    transition: all ease 150ms;
 }
 .header__logo h1 {
     margin: 0;
@@ -87,6 +93,37 @@ nav.nav .nav__item.nav__item--red {
         margin-left: 80px;
     }
 }
+
+
+.header-placeholder {
+    height: 150px;
+}
+
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #FFF;
+    z-index: 999;
+    transition: all ease 150ms;
+}
+
+.sticky-header--launched .header {
+    padding: 10px 0;
+}
+
+.sticky-header--launched .header__logo {
+    width: 90px;
+    height: 50px;
+}
+
+.sticky-header--scroll-down {
+    opacity: 0;
+}
+.sticky-header--scroll-up {
+    opacity: 1;
+}
+
 
 .hero .col {
     width: 100%;
@@ -326,6 +363,7 @@ h2 {
     left: 0;
     padding: 50px 0;
     background: #FFF;
+    z-index: 99999;
     overflow-y: scroll;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
