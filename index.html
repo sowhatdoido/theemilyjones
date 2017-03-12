@@ -43,8 +43,8 @@
                 </h2>
                 <script>
                 </script>
-                <p>My name is Emily Jones, something curator and one direction savant.</p>
-                <p>I’m a Gryffindor living in a Slytherin city, looking to collaborate with other creatively organized minds.</p>
+                <p>My name is Emily Jones.</p>
+                <p>I’m a Gryffindor living in a Slytherin city, looking to collaborate with other creatively and technically organized minds.</p>
             </div>
         </div>
     </div>
@@ -58,9 +58,9 @@
                 </div>
                 <div class="col col__right">
                     <h2>The Emily Jones</h2>
-                    <p>I am a Los Angeles based, enthusiastic digital project/client service manager with an edge in dev/design. I’m a creative problem solver who works hard, and plays works harder but somehow still don’t take myself too seriously. In my work I value humor, collaboration, organization, pixel perfection and on-point GIF responses. I was the Hermione Granger you probably hated in school, and now as a young professional I am still as tenacious and tireless as ever. And finally have the bushy hair under control (phew).</p>
+                    <p>I am a Los Angeles based, enthusiastic digital project manager with an edge in dev/design. I’m a creative problem solver who works hard, and plays works harder but I somehow still don’t take myself too seriously. In my work I value humor, collaboration, organization, pixel perfection and on-point GIF responses. I was the Hermione Granger you probably knew in school, and now as a young professional I am still as tenacious and tireless as ever. And finally have the wild hair under control (phew).</p>
                     <p>I’m a full time cat lover, gamer and temporary tattoo enthusiast. When I’m not working I enjoy attending Comic Conventions (WonderCon, SDCC and RTX are favorites), tracking down the best latte in Los Angeles, and pretending Parks and Recreation isn’t over.</p>
-                    <p>hello@theemilyjones.com // resume</p>
+                    <p><a href="mailto:hello@theemilyjones.com">hello@theemilyjones.com</a> // <a href="">resume</a></p>
                     <span></span>
                     <ul>
                         <li>[Re]Reading: <span>Harry Potter</span></li>
@@ -83,24 +83,24 @@
                 <div class="work__listing">
                     <h3>Fresh Interactive</h3>
                     <p>Account Executive</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'fresh');">learn more</a>
                 </div>
             </div>
             <div class="work__row">
                 <div class="work__listing">
                     <h3>Allied Integrated Marketing</h3>
                     <p>Studio Rep + Publicity Intern</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'allied');">learn more</a>
                 </div>
                 <div class="work__listing">
                     <h3>CBS Films</h3>
                     <p>Publicity Intern</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'cbs');">learn more</a>
                 </div>
                 <div class="work__listing">
                     <h3>Vision Design Studio</h3>
                     <p>Digital Marketing Intern</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'vision');">learn more</a>
                 </div>
             </div>
             <span class="work__heading">Volunteer</span>
@@ -108,17 +108,17 @@
                 <div class="work__listing">
                     <h3>Rooster Teeth RTX</h3>
                     <p>RTX Event Guardian Volunteer</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'rtx');">learn more</a>
                 </div>
                 <div class="work__listing">
                     <h3>Trojan Event Services</h3>
                     <p>Technical Assistant</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'tes');">learn more</a>
                 </div>
                 <div class="work__listing">
                     <h3>USC - International Communication Studies</h3>
                     <p>Account Executive</p>
-                    <a href="#" onclick="job(event);">learn more</a>
+                    <a href="#" onclick="job(event, 'usc');">learn more</a>
                 </div>
             </div>
         </div>
@@ -149,46 +149,36 @@
     </div>
     <div class="section lightbox">
         <div class="lightbox__close" onclick="hideLightbox()"><i class="fa fa-times" aria-hidden="true"></i></div>
-        <div class="section__content job">
-            <h2>Fresh Interactive</h2>
-            <p>Account Executive // May 2014 - Present</p>
-            <p>Project manager, marketing strategist, QA tester, budget manager, copywriter, and resident One Direction expert.</p>
-            <div class="job__details">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita velit et minus totam dolore autem, labore at nobis neque atque fugit hic illum animi itaque accusantium ipsa, saepe esse ducimus?</p>
-                <p>Architecto provident culpa corporis, eaque ducimus debitis quo neque quibusdam mollitia eius nobis aperiam repudiandae cupiditate expedita dolorum voluptas tempore quia recusandae iste? Ullam magni dolores beatae, ratione quae quaerat.</p>
-                <div class="job__skills">
-                    <span>the skills &amp; the tech</span>
-                    <ul>
-                        <li>Client Service Management</li>
-                        <li>Basic HTML &amp; CSS</li>
-                        <li>Responsive QA testing</li>
-                        <li>Tippity-top Organization</li>
-                        <li>Custom CMS mangement</li>
-                        <li>JIRA</li>
-                        <li>Confluence</li>
-                        <li>Photoshop</li>
-                        <li>Lasso, Campaign Monitor,  &amp; Constant Contact</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="section__content job"></div>
     </div>
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.runtime.min.js"></script>
+    <script src="templates/compiled.js"></script>
+    <script src="jobs.json"></script>
     <script>
-    var job = function(e){
+    
+    var job = function(e, job){
         e.preventDefault();
+
+        var template = Handlebars.templates['lightbox.hbs'],
+        context = data[job]
+        html    = template(context);
+        console.log(template, context, html);
+
         $('body').addClass('is-viewing_lightbox');
+        $('.lightbox .section__content.job').html(html);
     };
     var hideLightbox = function(){
         $('body').removeClass('is-viewing_lightbox');
     };
+
     var rotateText = function() {
-        var $active = $('.active', '.text-rotator');
-        var $next = ($active.next().length) ? $active.next() : $('span:first', '.text-rotator');
+        var $active = $('.text-rotator span.active');
+        var $next = ($active.next().length) ? $active.next() : $('.text-rotator span:first');
         $active.removeClass('active');
         $next.addClass('active');
     };
