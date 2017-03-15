@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/sowhatdoido/theemilyjones#readme",
   "devDependencies": {
-    "handlebars": "^4.0.6",
+    "handlebars": "^4.0.6",5
     "browser-sync": "^2.18.8"
   }
 }
