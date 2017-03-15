@@ -269,6 +269,9 @@ h2 {
 .about ul li a {
     color: inherit;
 }
+.about ul li i {
+    margin-right: 2px;
+}
 .about ul li a:hover,
 .about ul li a:hover span {
     color: #d6008b;
