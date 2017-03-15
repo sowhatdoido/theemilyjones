@@ -1,7 +1,7 @@
 html,
 body {
-    color: #333333;
-    font-family: 'Merriweather', serif;
+    color: #4a4a4a;
+    font-family: 'Karla', serif;
 }
 
 * {
@@ -135,37 +135,30 @@ h2 {
     font-size: 60px;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    color: #333;
 }
 .hero .col__left h2 .text-rotator {
     color: #d6008b;
     overflow: hidden;
     display: inline-block;
-    height: 70px;
     width: 100%;
     min-width: 340px;
     vertical-align: bottom;
     position: relative;
 }
 .hero .col__left h2 .text-rotator span {
-    position: absolute;
-    white-space: nowrap;
-    
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0%;
-    
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-100%);
+}
+.hero .col__left h2 .text-rotator span.active {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0%);
     -webkit-transition: all 250ms ease;
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
-}
-.hero .col__left h2 .text-rotator span.active {
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 100%;
 }
 
 
@@ -180,6 +173,7 @@ h2 {
         justify-content: space-between;
         flex-direction: row-reverse;
         align-items: center;
+        font-family: 'Karla', sans-serif;
     }
     
     .hero .col__left {
@@ -282,6 +276,7 @@ h2 {
 .work h2 {
     font-size: 40px;
     margin-bottom: 25px;
+    color: #FFF;
 }
 .work .work__heading {
     color: #8e8e8e;
