@@ -1,3 +1,3 @@
 # theemilyjones.com
 
-Personal website for Emily Jones~
+Personal website for mah buggaboo~
