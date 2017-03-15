@@ -315,15 +315,18 @@ h2 {
     color: #FFF;
 }
 .work h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
+    font-size: 44px;
+    margin-bottom: 50px;
     color: #FFF;
+    font-weight: 900;
 }
 .work .work__heading {
     color: #8e8e8e;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
+    margin-bottom: 15px;
+    display: block;
 }
 .work .work__row {
     position: relative;
@@ -331,6 +334,7 @@ h2 {
 }
 .work .work__listing h3 {
     margin: 0;
+    font-size: 20px;
 }
 .work .work__listing {
     width: 100%;
@@ -338,13 +342,17 @@ h2 {
     margin-bottom: 25px;
 }
 .work .work__listing p {
-    font-size: 12px;
+    font-size: 16px;
     color: gray;
     margin: 0;
+    font-family: 'Merriweather', serif;
 }
 .work .work__listing a {
-    color: #d6008b;
+    color: #FFF;
     font-size: 12px;
+}
+.work .work__listing a:hover {
+    color: #d6008b;
 }
 .work .section__heading {
     color: #d6008b;
