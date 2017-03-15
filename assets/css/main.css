@@ -193,6 +193,8 @@ h2 {
     text-transform: uppercase;
     margin-bottom: 25px;
     display: block;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 5px;
 }
 .about h2 {
     font-size: 40px;
@@ -249,6 +251,10 @@ h2 {
     color: gray;
 }
 
+.about .section__heading {
+    color: #333;
+}
+
 @media(min-width: 760px){
     .about .col.col__left {
         width: 100%;
@@ -280,6 +286,9 @@ h2 {
 }
 .work .work__heading {
     color: #8e8e8e;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
 }
 .work .work__row {
     position: relative;
@@ -298,6 +307,9 @@ h2 {
     color: #d6008b;
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
+}
+.work .section__heading {
+    color: #d6008b;
 }
 
 @media(min-width: 760px){ 
@@ -351,6 +363,9 @@ h2 {
     border-radius: 5px;
     padding: 10px 25px;
     cursor: pointer;
+}
+.contact .section__heading {
+    color: #333333;
 }
 @media(min-width: 760px){ 
     .contact .form-group.col-3 {
