@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sowhatdoido/theemilyjones/issues"
   },
-  "homepage": "https://github.com/sowhatdoido/theemilyjones#readme"
+  "homepage": "https://github.com/sowhatdoido/theemilyjones#readme",
+  "devDependencies": {
+    "handlebars": "^4.0.6"
+  }
 }
