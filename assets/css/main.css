@@ -452,6 +452,21 @@ h2 {
     cursor: pointer;
 }
 
+.lightbox h2 {
+    font-weight: 900;
+}
+
+.lightbox .info {
+    font-family: 'Merriweather';
+    color: #8e8e8e;
+}
+.lightbox .info span {
+    color: #d6008b;
+}
+.lightbox .desc {
+    font-style: italic;
+}
+
 .job__details {
     border-top: 3px solid;
     border-bottom: 3px solid;

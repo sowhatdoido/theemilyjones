@@ -9,11 +9,11 @@ templates['lightbox.hbs'] = template({"1":function(container,depth0,helpers,part
 
   return "<h2>"
     + alias1(container.lambda((depth0 != null ? depth0.name : depth0), depth0))
-    + "</h2>\n<p>"
+    + "</h2>\n<p class=\"info\">"
     + alias1(((helper = (helper = helpers.position || (depth0 != null ? depth0.position : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"position","hash":{},"data":data}) : helper)))
-    + " // "
+    + " <span>//</span> "
     + alias1(((helper = (helper = helpers.stay_period || (depth0 != null ? depth0.stay_period : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"stay_period","hash":{},"data":data}) : helper)))
-    + "</p>\n<p>"
+    + "</p>\n<p class=\"desc\">"
     + alias1(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"description","hash":{},"data":data}) : helper)))
     + "</p>\n<div class=\"job__details\">\n    "
     + ((stack1 = ((helper = (helper = helpers.copy || (depth0 != null ? depth0.copy : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"copy","hash":{},"data":data}) : helper))) != null ? stack1 : "")
