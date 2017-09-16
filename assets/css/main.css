@@ -135,6 +135,7 @@ nav.nav .nav__item.nav__item--lowercase {
 
 .sticky-header--scroll-down {
     opacity: 0;
+    pointer-events: none;
 }
 .sticky-header--scroll-up {
     opacity: 1;
