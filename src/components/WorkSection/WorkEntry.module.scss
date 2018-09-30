@@ -92,8 +92,11 @@
     color: #d6008b;
   }
   ul {
-    column-count: 2;
     list-style: none;
+    padding-left: 1em;
+    @media(min-width: 761px){
+      column-count: 2;
+    }
   }
   li {
     margin-left: 1em;
