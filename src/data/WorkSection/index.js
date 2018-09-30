@@ -17,7 +17,6 @@ export default {
             <p></p>
           `,
           skills: [
-            "Client service management",
           ]
         },
         {

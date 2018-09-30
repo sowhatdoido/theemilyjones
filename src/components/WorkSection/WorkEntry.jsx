@@ -55,7 +55,7 @@ class WorkEntry extends Component {
             <div className={styles.details}>
               <RawHtml.div>{this.props.copy}</RawHtml.div>
               <div className={styles.skills}>
-                <span>the skills &amp; the tech</span>
+                { this.props.skills.length > 0 && <span>the skills &amp; the tech</span> }
                 <ul>
                   {this.props.skills.map(e => (
                     <li key={e}>{e}</li>
