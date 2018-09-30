@@ -1,9 +1,13 @@
 version: 2
 jobs:
-  deploy:
+  build:
     machine:
       enabled: true
     steps:
+      - run:
+          name: Run Tests
+          command: |
+            yarn run test --watchAll=false
       - run:
           name: Deploy Over SSH
           command: |
@@ -11,11 +15,9 @@ jobs:
 
 workflows:
   version: 2
-  deploy:
+  build:
     jobs:
-      - deploy:
-          requires:
-            - build
+      - build:
           filters:
             branches:
               only: master
