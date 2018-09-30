@@ -27,7 +27,7 @@ const SiteNavigation = ({small, hidden}) => (
           <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>About</a>
           <a href="#work" onClick={(e) => scrollToSection(e, '#work')}>Work</a>
           <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}>Contact</a>
-          <a className={styles.resume} href={data.resume}>resume</a>
+          <a className={styles.resume} href={data.resume} target="_blank" rel="noopener noreferrer">resume</a>
         </div>
       </div>
     </div>
