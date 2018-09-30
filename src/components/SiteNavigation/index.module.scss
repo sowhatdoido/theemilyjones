@@ -1,0 +1,87 @@
+@import '../../common.scss';
+
+.SiteNavigation {
+  font-family: 'Raleway', sans-serif;
+  position: sticky;
+  top: 0;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, 0.95);
+  transition: 250ms ease;
+  z-index: 9;
+  transform: translate3d(0, 0, 1px);
+}
+
+.content {
+  composes: section;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placeholder {
+  height: 0;
+  display: block;
+  transition: 250ms ease;
+}
+.show {
+  height: 50px;
+}
+
+a.logo {
+  background: url('./logo.png') no-repeat;
+  background-size: contain;
+  width: 161px;
+  height: 90px;
+  display: inline-block;
+  transition: all ease 150ms;
+  flex-shrink: 0;
+  &:after {
+    display: none;
+  }
+}
+
+.small {
+  padding: 10px 0;
+
+  a.logo {
+    width: 90px;
+    height: 50px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo h1 {
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.nav {
+  display: block;
+  text-align: right;
+  @media(min-width: 761px){
+    display: flex;
+  }
+}
+
+.nav a {
+  color: #333333;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  margin-left: 40px;
+}
+
+a.resume {
+  color: #d6008b;
+  font-style: italic;
+  text-transform: none;
+  margin-left: 80px;
+  &:after {
+    background-color: #d6008b;
+  }
+}

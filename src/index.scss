@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #4a4a4a;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #333333;
+}
+
+a {
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+  display: inline-block;
+
+  @media(min-width: 761px){
+    &:after {
+      content: '';
+      height: 1px;
+      width: 0%;
+      background: #333;
+      display: block;
+      transition: 150ms ease;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
+
+h2 {
+  font-size: 60px;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-weight: 900;
+}
+
+.ReactModal__Overlay {
+  z-index: 99;
+}
+
+.ReactModal__Content {
+  opacity: 0;
+  transform: translate3d(0, 100%, 1px);
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transition: all 250ms;
+  transform: translate3d(0, 0, 1px);
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}

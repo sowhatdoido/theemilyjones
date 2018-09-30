@@ -1,0 +1,59 @@
+@import '../../common.scss';
+
+.WorkSection {
+  padding: 50px 0;
+  background: #262626;
+  color: #FFF;
+  
+  @media(min-width: 761px){ }
+}
+.content {
+  composes: section;
+}
+.heading {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+
+  color: #d6008b;
+}
+.title h2 {
+  font-size: 44px;
+  margin-bottom: 50px;
+  color: #FFF;
+  font-weight: 900;
+}
+
+.workCategoryHeading {
+  color: #8e8e8e;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.workCategory {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.entries {
+  padding: 0 15px;
+
+  @media(min-width: 761px){
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.entry {
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  @media(min-width: 761px){
+    width: 33%;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../common.scss';
+
+.ContactSection {
+  composes: section;
+  padding: 50px 30px 100px;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    i {
+      color: #d6008b;
+    }
+  }
+
+  a {
+    color: #d6008b;
+    &:after {
+      background-color: #d6008b;
+    }
+  }
+}
+
+.heading {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+
+  color: #333;
+}
