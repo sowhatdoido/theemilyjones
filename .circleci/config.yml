@@ -1,9 +1,8 @@
 version: 2
 jobs:
   build:
-    machine:
-      node:
-        version: v8.12.0
+    docker:
+      - image: circleci/node:8.12
     steps:
       - run:
           name: Run Tests
