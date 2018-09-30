@@ -16,6 +16,7 @@
     margin: 0;
     font-family: 'Merriweather', serif;
   }
+
   a {
     color: #FFF;
     font-size: 12px;
@@ -58,6 +59,13 @@
   margin: 0 auto;
   display: block;
   box-sizing: border-box;
+
+  h2 {
+    font-size: 35px;
+    @media(min-width: 761px){
+      font-size: 60px;
+    }
+  }
 }
 
 .info {

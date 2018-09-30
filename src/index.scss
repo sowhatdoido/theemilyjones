@@ -42,7 +42,8 @@ h2 {
 }
 
 .ReactModal__Overlay {
-  z-index: 99;
+  z-index: 999;
+  transform: translate3d(0, 0, 1px);
 }
 
 .ReactModal__Content {

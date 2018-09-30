@@ -87,7 +87,7 @@
   ul { padding: 0; }
   li  {
     display: inline-block;
-    width: 31%;
+    width: 100%;
     font-size: 12px;
     line-height: 25px;
     vertical-align: top;
@@ -95,6 +95,9 @@
     color: #4a4a4a;
     box-sizing: border-box;
     padding: 0 5px;
+    @media(min-width: 761px){
+      width: 31%;
+    }
   }
   span {
     color: #9b9b9b;
