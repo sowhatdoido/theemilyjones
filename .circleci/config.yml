@@ -33,6 +33,10 @@ jobs:
           name: Run Tests
           command: |
             yarn run test --watchAll=false
+
+      - add_ssh_keys: 
+          fingerprints: 
+            - "96:42:97:13:fd:0b:27:2f:68:58:59:37:09:76:16:de"
       - run:
           name: Deploy Over SSH
           command: |
