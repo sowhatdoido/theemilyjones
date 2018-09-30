@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
-    machine:
-      enabled: true
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/repo
     steps:
       - run:
           name: Run Tests
