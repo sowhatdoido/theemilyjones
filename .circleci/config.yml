@@ -42,9 +42,19 @@ jobs:
             yarn run test --watchAll=false
 
       - run:
-          name: Deploy Over SSH
+          name: Build project
           command: |
-            ssh $SSH_USER@$SSH_HOST "cd /var/www/vhosts/theemilyjones.com/theemilyjones && sh ./scripts/build.sh"
+            yarn run build
+
+      - run:
+          name: Deploy
+          command: |
+            scp -r build $SSH_USER@$SSH_HOST:/var/www/vhosts/theemilyjones.com/deployed
+
+      # - run:
+      #     name: Deploy Over SSH
+      #     command: |
+      #       ssh $SSH_USER@$SSH_HOST "cd /var/www/vhosts/theemilyjones.com/theemilyjones && sh ./scripts/build.sh"
 
 
 workflows:
