@@ -1,7 +1,5 @@
 version: 2
 jobs:
-  build:
-    #...
   deploy:
     machine:
       enabled: true
@@ -9,13 +7,12 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh $SSH_USER@$SSH_HOST "<remote deploy command>"
+            ssh $SSH_USER@$SSH_HOST "cd /var/www/vhosts/theemilyjones.com/theemilyjones && sh ./scripts/build.sh"
 
 workflows:
   version: 2
-  build-and-deploy:
+  deploy:
     jobs:
-      - build
       - deploy:
           requires:
             - build
