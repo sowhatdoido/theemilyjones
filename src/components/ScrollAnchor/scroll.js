@@ -1,83 +1,28 @@
-export default function(destination, duration = 200, easing = 'linear', callback) {
+export default function(destination, time = 200) {
   if (!destination) { return; }
-  const easings = {
-    linear(t) {
-      return t;
-    },
-    easeInQuad(t) {
-      return t * t;
-    },
-    easeOutQuad(t) {
-      return t * (2 - t);
-    },
-    easeInOutQuad(t) {
-      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-    },
-    easeInCubic(t) {
-      return t * t * t;
-    },
-    easeOutCubic(t) {
-      return (--t) * t * t + 1;
-    },
-    easeInOutCubic(t) {
-      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-    },
-    easeInQuart(t) {
-      return t * t * t * t;
-    },
-    easeOutQuart(t) {
-      return 1 - (--t) * t * t * t;
-    },
-    easeInOutQuart(t) {
-      return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
-    },
-    easeInQuint(t) {
-      return t * t * t * t * t;
-    },
-    easeOutQuint(t) {
-      return 1 + (--t) * t * t * t * t;
-    },
-    easeInOutQuint(t) {
-      return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
-    }
-  };
 
-  const start = window.pageYOffset;
-  const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+  const scrollTo = (element, to, duration) => {
+    var start = document.scrollingElement.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
 
-
-  if ('requestAnimationFrame' in window === false) {
-    const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-    const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
-    const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-  
-    window.scroll(0, destinationOffsetToScroll);
-    if (callback) {
-      callback();
-    }
-    return;
+    var animateScroll = function(){
+        var easeInOutQuad = function (t, b, c, d) {
+          t /= d/2;
+          if (t < 1) return c/2*t*t + b;
+          t--;
+          return -c/2 * (t*(t-2) - 1) + b;
+        };
+        currentTime += increment;
+        var val = easeInOutQuad(currentTime, start, change, duration);
+        document.scrollingElement.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
   }
 
-  function scroll() {
-    const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-    const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
-    const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-  
-    const now = 'now' in window.performance ? performance.now() : new Date().getTime();
-    const time = Math.min(1, ((now - startTime) / duration));
-    const timeFunction = easings[easing](time);
-    window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-    if (Math.round(window.pageYOffset) === destinationOffsetToScroll) {
-      if (callback) {
-        callback();
-      }
-      return;
-    }
-
-    requestAnimationFrame(scroll);
-  }
-
-  scroll();
+  scrollTo(document.body, destination.offsetTop, time);
 }
